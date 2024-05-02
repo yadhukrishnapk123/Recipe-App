@@ -1,0 +1,158 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+ }
+
+ body{
+    background-color: #2b1d0f;
+    color: white;
+
+ }
+
+ header nav{
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+ }
+
+ header nav h1{
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+ }
+
+ header nav form{
+   display: flex;
+   justify-content: center;
+
+ }
+
+
+ form input[type="text"]{
+flex-grow: 1;
+margin-right: 10px;
+
+ }
+ 
+ form input[type="text"],button [type="submit"]{
+   border: none;
+   font-size: 18px;
+   padding: 10px;
+   border-radius: 4px;
+    
+    
+     }
+
+
+
+     form  button[type="submit"]{
+        background-color: orangered;
+        color: white;
+        cursor: pointer;
+        transition:background-color 0.2s
+        ease-in-out;
+
+     }
+     
+     form  button[type="submit"]:hover,.resipe button:hover{
+        background-color:#ff5c5c;
+
+     }
+
+
+     .resipe-container{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        grid-gap: 40px;
+        width: 80%;
+        margin: 10px auto;
+        padding: 20px;
+        place-items:center;
+
+     }
+     .resipe img{
+        height: 300px;
+     }
+
+     .resipe{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        color: black;
+        border-radius: 6px;
+        box-shadow: 0 5px 10px rgba(78,73,73,0.1),-5px -5px 10px rgba(78,73,73,0.1) ;
+
+     }
+
+     .resipe h3{
+        font-size: 24px;
+        margin-block: 5px;
+     }
+
+
+
+     .resipe p{
+        font-size: 20px;
+        color: #2b1d0f;
+        margin: 5px 0;
+     }
+
+     .resipe span{
+       font-weight: 600;
+     }
+
+     .resipe button{
+        font-size: 20px;
+        font-weight: 600;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 18px auto;
+        background-color: red;
+        color: white;
+
+     }
+
+
+
+
+/*resipe details*/
+.resipe-details{
+    display: none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50px);
+    -webkit-transform: translate(-50%,-50%);
+    background-color: #694c2f;
+    border-radius: 12px;
+    width: 40%;
+    height: 50%;
+    font-size: 20px;
+    
+
+
+}
+
+ @media screen and (max-width:600px){
+    header nav{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    header nav form{
+        width: 80%;
+
+    }
+
+ }
